@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <title>Best | 测试平台</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta content="A fully featured admin theme which can be used to build CRM, CMS, etc." name="description" />
+  <meta content="Coderthemes" name="author" />
+  <!-- App favicon -->
+  <link rel="shortcut icon" href="/assets/images/favicon.ico">
+
+  <!-- App css -->
+  <link href="/assets/css/icons.min.css" rel="stylesheet" type="text/css" />
+  <link href="/assets/css/app-creative.min.css" rel="stylesheet" type="text/css" id="light-style" />
+  <link href="/assets/css/app-creative-dark.min.css" rel="stylesheet" type="text/css" id="dark-style" />
+
+</head>
+
+<body class="loading" data-layout="topnav"
+  data-layout-config='{"layoutBoxed":false,"darkMode":false,"showRightSidebarOnStart": true}'>
+  <!-- Begin page -->
+  <div class="wrapper">
+
+    <!-- ============================================================== -->
+    <!-- Start Page Content here -->
+    <!-- ============================================================== -->
+
+    <div class="content-page">
+      <div class="content">
+        <!-- Topbar Start -->
+        <div class="navbar-custom topnav-navbar topnav-navbar-dark">
+          <div class="container-fluid">
+
+            <!-- LOGO -->
+            <a href="" class="topnav-logo">
+              <h2>POSTMAN</h2>
+            </a>
+            <a class="navbar-toggle" data-bs-toggle="collapse" data-bs-target="#topnav-menu-content">
+              <div class="lines">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+            </a>
+          </div>
+        </div>
+        <!-- end Topbar -->
+
+        <!-- Start Content-->
+        <div class="container-fluid">
+
+          <!-- start page title -->
+          <div class="row">
+            <div class="col-12">
+              <div class="page-title-box">
+                <div class="page-title-right">
+                  <ol class="breadcrumb m-0">
+                    <li class="breadcrumb-item"><a href="javascript: void(0);">测试平台</a></li>
+                    <li class="breadcrumb-item"><a href="javascript: void(0);">测试工具</a></li>
+                    <li class="breadcrumb-item active">POSTMAN</li>
+                  </ol>
+                </div>
+                <h4 class="page-title">POSTMAN</h4>
+              </div>
+            </div>
+          </div>
+          <!-- end page title -->
+
+          <div class="row">
+            <div class="col-lg-12">
+              <div class="card">
+                <div class="card-body">
+                  <div id="datatables-dashboard-traffic_wrapper" class="dataTables_wrapper dt-bootstrap4 no-footer">
+                    <div class="row">
+                      <div class="col-sm-12 col-md-6"></div>
+                      <div class="col-sm-12 col-md-6"></div>
+                    </div>
+                    <div class="row">
+                      <div class="col-sm-12">
+                        <div style="margin-left: 5%; margin-right: 5%; width: 90%;">
+
+                          <!--URL-->
+                          <div class="input-group create-option">
+                            <select class="select2-single" id="req_method" style="width: 100px; padding-left: 20px;">
+                              <option value="get">GET</option>
+                              <option value="post">POST</option>
+                            </select>
+                            <input id="req_url" type="text" class="form-control" value="http">
+                            <button type="button" class="btn btn-primary" onclick="sendFun()">Send</button>
+                          </div>
+
+                          <!--请求头-->
+                          <div class="input-group">
+                            <span class="input-group-addon" style="margin-top: 5px;margin-right: 10px;">header：</span>
+                            <div class="input-group mb-3">
+                              <div class="input-group">
+                                <div id="headerEditor" style="width: 100%"></div>
+                              </div>
+                            </div>
+                          </div>
+
+                          <!--参数类型-->
+                          <div style="margin-top: 10px;">
+                            <label>* 参数类型：</label>
+                            <label class="radio-inline">
+                              <input type="radio" name="par_type" id="form" value="form" checked> form-data
+                            </label>
+                            <label class="radio-inline">
+                              <input type="radio" name="par_type" id="json" value="json"> JSON
+                            </label>
+                          </div>
+
+                          <!--参数值-->
+                          <div class="input-group" style="height: 230px;">
+                            <!--                  <span class="input-group-addon" style="margin-top: 5px;margin-right: 10px;">参数：</span>-->
+                            <div class="input-group mb-3">
+                              <div class="input-group">
+                                <div id="parameterEditor" style="width: 100%"></div>
+                                <small id="emailHelp" class="form-text text-muted">说明：以字典的方式设置参数，如：{"id":1, "name":"名称"}.</small>
+                              </div>
+                            </div>
+                          </div>
+
+                          <!--接口返回值-->
+                          <div style="margin-top: 30px;">
+                            <p>返回结果：</p>
+                            <textarea id="result" class="form-control" rows="10" name=textarea></textarea>
+                          </div>
+
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+                <!-- end card body-->
+              </div>
+              <!-- end card -->
+            </div>
+            <!-- end col-->
+          </div>
+          <!-- end row-->
+
+        </div>
+        <!-- container -->
+
+      </div>
+      <!-- content -->
+
+      <!-- Footer Start -->
+      <footer class="footer">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-md-6">
+              <script>document.write(new Date().getFullYear())</script> ©重定向科技 itest.info
+            </div>
+            <div class="col-md-6">
+              <div class="text-md-end footer-links d-none d-md-block">
+                <a href="javascript: void(0);">About</a>
+                <a href="javascript: void(0);">Support</a>
+                <a href="javascript: void(0);">Contact Us</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+      <!-- end Footer -->
+
+    </div>
+
+    <!-- ============================================================== -->
+    <!-- End Page content -->
+    <!-- ============================================================== -->
+
+  </div>
+  <!-- END wrapper -->
+
+  <div class="rightbar-overlay"></div>
+  <!-- /End-bar -->
+
+  <!-- bundle -->
+  <script src="/assets/js/vendor.min.js"></script>
+  <script src="/assets/js/app.min.js"></script>
+  <link href="/assets/css/jquery.jsonview.css" rel="stylesheet">
+  <link href="/assets/css/jsoneditor.css" rel="stylesheet">
+  <link href="/assets/css/select2.min.css" rel="stylesheet" />
+  <script src="/assets/js/jquery.min.js"></script>
+  <script src="/assets/js/jquery.jsonview.js"></script>
+  <script src="/assets/js/jsoneditor.js"></script>
+  <script src="/assets/js/select2.min.js"></script>
+  <script type="text/javascript">
+
+    //初始化JSONeditor编辑框
+    var headers = document.getElementById("headerEditor");
+    var parameters = document.getElementById("parameterEditor");
+    var options = {
+      mode: "code"
+    };
+    var headerEditor = new JSONEditor(headers, options);
+    var parameterEditor = new JSONEditor(parameters, options);
+
+    // 发送方法
+    function sendFun() {
+      var req_url = $('#req_url').val();
+      // var method = $('input[name="req_method"]:checked').val();
+      var method = $('select[id="req_method"]').val();
+      var par_type = $('input[name="par_type"]:checked').val();
+
+      var header = headerEditor.get();
+      var header_str = JSON.stringify(header, null, 2);
+      var parameter_body = parameterEditor.get();
+      var parameter_body_str = JSON.stringify(parameter_body, null, 2);
+
+      console.log("header", header_str)
+      console.log("parameter_body", parameter_body_str)
+
+      if (req_url === "") {
+        window.alert("URL地址不能为空")
+        return
+      }
+
+      $.post("/api/send/", {
+        url: req_url,
+        method: method,
+        header: header_str,
+        par_type: par_type,
+        par_value: parameter_body_str
+      },
+        function (resp) {
+          if (resp.code == 10200) {
+            document.querySelector("#result").value = resp.data;
+          } else {
+            window.alert(resp.message);
+          }
+        });
+
+    }
+
+  </script>
+
+  <style>
+    .create-option {
+      height: 45px;
+    }
+
+    div.jsoneditor {
+      border: thin solid #ced4da;
+    }
+
+    div.jsoneditor-menu {
+      display: none;
+    }
+
+    .ace-jsoneditor .ace_gutter {
+      background: white;
+    }
+
+    div.jsoneditor-outer.has-main-menu-bar {
+      margin-top: 0px;
+      padding-top: 0px;
+    }
+
+    .per-label {
+      margin-right: 10px;
+      margin-bottom: 4px;
+      font-size: 1rem;
+    }
+  </style>
+
+</body>
+
+</html>
